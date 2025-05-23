@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-charcoal;
+  }
+
+  /* Default Arabic styles */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-arabic-heading font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl leading-tight;
+  }
+
+  p {
+    @apply font-arabic-body text-base md:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-2xl font-bold transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-primary text-primary bg-transparent hover:bg-beige/50;
+  }
+
+  .section {
+    @apply py-16 md:py-24 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white p-6 md:p-8 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  /* Language-specific typography classes */
+  .lang-ar h1, .lang-ar h2, .lang-ar h3, .lang-ar h4, .lang-ar h5, .lang-ar h6 {
+    @apply font-arabic-heading font-bold;
+  }
+  
+  .lang-ar p, .lang-ar div, .lang-ar span, .lang-ar a {
+    @apply font-arabic-body;
+  }
+
+  .lang-fr h1, .lang-fr h2, .lang-fr h3, .lang-fr h4, .lang-fr h5, .lang-fr h6 {
+    @apply font-fr-heading font-bold;
+  }
+  
+  .lang-fr p, .lang-fr div, .lang-fr span, .lang-fr a {
+    @apply font-fr-body;
+  }
+
+  .lang-en h1, .lang-en h2, .lang-en h3, .lang-en h4, .lang-en h5, .lang-en h6 {
+    @apply font-en-heading font-bold;
+  }
+  
+  .lang-en p, .lang-en div, .lang-en span, .lang-en a {
+    @apply font-en-body;
+  }
+}
