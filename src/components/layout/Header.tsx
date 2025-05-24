@@ -56,7 +56,7 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {/* Render navigation items in correct order based on language direction */}
-            <ul className={`flex items-center ${direction === 'rtl' ? 'space-x-reverse' : ''} space-x-6`}>
+            <ul className={`mx-6 flex items-center ${direction === 'rtl' ? 'space-x-reverse' : ''} space-x-6`}>
               {navItems.map((item) => (
                 <li key={item.key}>
                   <a
